@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News & Updates | Company Name</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#10b981',secondary:'#6366f1'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+.news-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.news-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+.skeleton {
+animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+0%, 100% {
+opacity: 0.5;
+}
+50% {
+opacity: 0.8;
+}
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+</style>
+</head>
+<body class="bg-white min-h-screen">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-gray-600 hover:text-primary font-medium">Home</a>
+<a href="#" class="text-primary font-medium border-b-2 border-primary pb-1">News</a>
+<a href="#" class="text-gray-600 hover:text-primary font-medium">About</a>
+<a href="#" class="text-gray-600 hover:text-primary font-medium">Services</a>
+<a href="#" class="text-gray-600 hover:text-primary font-medium">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap font-medium hover:bg-opacity-90 transition-colors">Get Started</button>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</header>
+<!-- Mobile Menu (Hidden by default) -->
+<div class="hidden fixed inset-0 z-50 bg-white p-5">
+<div class="flex justify-between items-center mb-8">
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+<button class="w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<nav class="flex flex-col space-y-6">
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-gray-600 hover:text-primary font-medium text-lg">Home</a>
+<a href="#" class="text-primary font-medium text-lg border-l-4 border-primary pl-3">News</a>
+<a href="#" class="text-gray-600 hover:text-primary font-medium text-lg">About</a>
+<a href="#" class="text-gray-600 hover:text-primary font-medium text-lg">Services</a>
+<a href="#" class="text-gray-600 hover:text-primary font-medium text-lg">Contact</a>
+</nav>
+<div class="mt-8">
+<button class="w-full bg-primary text-white py-3 !rounded-button whitespace-nowrap font-medium hover:bg-opacity-90 transition-colors">Get Started</button>
+</div>
+</div>
+<!-- Page Title Section -->
+<section class="bg-gray-50 py-12 md:py-16">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">News & Updates</h1>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-gray-600 text-lg">Stay informed about our latest company developments, partnerships, and industry insights. Browse through our collection of news and updates.</p>
+<div class="mt-6">
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80">
+<i class="ri-arrow-left-line ri-lg mr-2"></i>
+<span>Back to Homepage</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Filtering Section -->
+<section class="py-8 border-b">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div class="flex items-center">
+<span class="text-gray-700 font-medium mr-3">Filter by:</span>
+<div class="relative">
+<button id="categoryDropdown" class="flex items-center bg-white border border-gray-300 !rounded-button px-4 py-2 text-gray-700 hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 whitespace-nowrap">
+<span id="selectedCategory">All Updates</span>
+<i class="ri-arrow-down-s-line ri-lg ml-2"></i>
+</button>
+<div id="categoryOptions" class="hidden absolute left-0 mt-2 w-48 bg-white shadow-lg !rounded-md z-10 border border-gray-200">
+<ul class="py-1">
+<li class="category-option px-4 py-2 hover:bg-gray-50 cursor-pointer text-primary font-medium" data-value="all">All Updates</li>
+<li class="category-option px-4 py-2 hover:bg-gray-50 cursor-pointer" data-value="partnerships">Partnerships</li>
+<li class="category-option px-4 py-2 hover:bg-gray-50 cursor-pointer" data-value="expansions">Expansions</li>
+<li class="category-option px-4 py-2 hover:bg-gray-50 cursor-pointer" data-value="training">Training</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="relative w-full md:w-64">
+<input type="text" placeholder="Search news..." class="w-full border border-gray-300 !rounded-button pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+<div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News Grid -->
+<section class="py-12">
+<div class="container mx-auto px-4">
+<div id="newsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- News Item 1 -->
+<article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+<div class="relative h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%20office%20meeting%20with%20diverse%20business%20professionals%20discussing%20partnership%20agreement%2C%20professional%20corporate%20setting%2C%20natural%20lighting%2C%20business%20attire%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=news1&orientation=landscape" alt="New Partnership Announcement" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4">
+<span class="inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Partnerships</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-gray-500 text-sm mb-2">June 20, 2025</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">Strategic Partnership with Global Tech Solutions Announced</h3>
+<p class="text-gray-600 mb-4 line-clamp-3">We're excited to announce our new strategic partnership with Global Tech Solutions, aimed at expanding our service offerings and technological capabilities in key markets across North America and Europe.</p>
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/d4435d1f-e708-4175-8af9-7f4554cf2e24" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+Read More
+<i class="ri-arrow-right-line ri-lg ml-1"></i>
+</a>
+</div>
+</article>
+<!-- News Item 2 -->
+<article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+<div class="relative h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%20office%20building%20exterior%20with%20glass%20facade%2C%20urban%20setting%2C%20professional%20architecture%2C%20blue%20sky%2C%20business%20district%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=news2&orientation=landscape" alt="New Office Opening" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4">
+<span class="inline-block bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Expansions</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-gray-500 text-sm mb-2">June 15, 2025</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">New Regional Headquarters Opens in Singapore</h3>
+<p class="text-gray-600 mb-4 line-clamp-3">We're proud to announce the opening of our new regional headquarters in Singapore, strengthening our presence in the Asia-Pacific region and supporting our growing client base across Southeast Asia.</p>
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/d4435d1f-e708-4175-8af9-7f4554cf2e24" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+Read More
+<i class="ri-arrow-right-line ri-lg ml-1"></i>
+</a>
+</div>
+</article>
+<!-- News Item 3 -->
+<article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+<div class="relative h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%20training%20workshop%20with%20diverse%20participants%2C%20interactive%20learning%20environment%2C%20modern%20classroom%20setting%2C%20technology%20integration%2C%20engaged%20learners%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=news3&orientation=landscape" alt="Training Program Launch" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4">
+<span class="inline-block bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Training</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-gray-500 text-sm mb-2">June 10, 2025</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">Launch of Advanced Certification Program for Industry Professionals</h3>
+<p class="text-gray-600 mb-4 line-clamp-3">Today we launched our comprehensive certification program designed to equip industry professionals with cutting-edge skills and knowledge needed to excel in today's rapidly evolving business landscape.</p>
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/d4435d1f-e708-4175-8af9-7f4554cf2e24" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+Read More
+<i class="ri-arrow-right-line ri-lg ml-1"></i>
+</a>
+</div>
+</article>
+<!-- News Item 4 -->
+<article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+<div class="relative h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=business%20award%20ceremony%20with%20professional%20audience%2C%20elegant%20venue%2C%20award%20trophy%20presentation%2C%20formal%20attire%2C%20celebration%20atmosphere%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=news4&orientation=landscape" alt="Industry Award" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4">
+<span class="inline-block bg-yellow-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Recognition</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-gray-500 text-sm mb-2">June 5, 2025</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">Company Receives Prestigious Industry Excellence Award</h3>
+<p class="text-gray-600 mb-4 line-clamp-3">We are honored to announce that our company has been recognized with the 2025 Industry Excellence Award for our innovative approach to sustainable business practices and exceptional client satisfaction.</p>
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/d4435d1f-e708-4175-8af9-7f4554cf2e24" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+Read More
+<i class="ri-arrow-right-line ri-lg ml-1"></i>
+</a>
+</div>
+</article>
+<!-- News Item 5 -->
+<article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+<div class="relative h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%20tech%20product%20launch%20event%2C%20innovative%20technology%20display%2C%20professional%20presentation%2C%20engaged%20audience%2C%20sleek%20product%20showcase%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=news5&orientation=landscape" alt="Product Launch" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4">
+<span class="inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Partnerships</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-gray-500 text-sm mb-2">May 28, 2025</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">Joint Product Launch with InnovateTech Expands Market Reach</h3>
+<p class="text-gray-600 mb-4 line-clamp-3">Our collaboration with InnovateTech has resulted in the successful launch of an integrated solution that addresses key industry challenges while expanding our combined market reach by an estimated 35%.</p>
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/d4435d1f-e708-4175-8af9-7f4554cf2e24" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+Read More
+<i class="ri-arrow-right-line ri-lg ml-1"></i>
+</a>
+</div>
+</article>
+<!-- News Item 6 -->
+<article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+<div class="relative h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%20team%20working%20in%20modern%20office%20environment%2C%20collaborative%20workspace%2C%20diverse%20business%20professionals%2C%20technology%20integration%2C%20productive%20atmosphere%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=news6&orientation=landscape" alt="Team Expansion" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4">
+<span class="inline-block bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Expansions</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-gray-500 text-sm mb-2">May 20, 2025</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">Company Expands Development Team with Key Industry Talent</h3>
+<p class="text-gray-600 mb-4 line-clamp-3">We're pleased to announce the expansion of our development team with the addition of several industry veterans who bring decades of combined experience in software architecture and AI implementation.</p>
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/d4435d1f-e708-4175-8af9-7f4554cf2e24" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+Read More
+<i class="ri-arrow-right-line ri-lg ml-1"></i>
+</a>
+</div>
+</article>
+<!-- News Item 7 -->
+<article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+<div class="relative h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%20webinar%20setup%20with%20presenter%20and%20digital%20presentation%2C%20virtual%20learning%20environment%2C%20technology%20integration%2C%20engaged%20online%20audience%2C%20professional%20lighting%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=news7&orientation=landscape" alt="Webinar Series" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4">
+<span class="inline-block bg-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Training</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-gray-500 text-sm mb-2">May 15, 2025</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">New Webinar Series Focuses on Industry Transformation</h3>
+<p class="text-gray-600 mb-4 line-clamp-3">Our new monthly webinar series will feature industry experts discussing digital transformation strategies, with the inaugural session attracting over 2,000 professionals from across the globe.</p>
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/d4435d1f-e708-4175-8af9-7f4554cf2e24" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+Read More
+<i class="ri-arrow-right-line ri-lg ml-1"></i>
+</a>
+</div>
+</article>
+<!-- News Item 8 -->
+<article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+<div class="relative h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=community%20service%20project%20with%20diverse%20volunteers%2C%20environmental%20cleanup%2C%20teamwork%2C%20outdoor%20setting%2C%20corporate%20social%20responsibility%2C%20positive%20impact%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=news8&orientation=landscape" alt="Community Initiative" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4">
+<span class="inline-block bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Community</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-gray-500 text-sm mb-2">May 8, 2025</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">Company Launches Sustainability Initiative with Local Communities</h3>
+<p class="text-gray-600 mb-4 line-clamp-3">Our new community-focused sustainability program aims to reduce environmental impact while creating meaningful partnerships with local organizations across all our operational regions.</p>
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/d4435d1f-e708-4175-8af9-7f4554cf2e24" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+Read More
+<i class="ri-arrow-right-line ri-lg ml-1"></i>
+</a>
+</div>
+</article>
+<!-- News Item 9 -->
+<article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+<div class="relative h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=international%20business%20conference%20with%20diverse%20attendees%2C%20professional%20networking%2C%20exhibition%20booths%2C%20industry%20showcase%2C%20business%20presentations%2C%20high%20quality%20professional%20photo&width=600&height=400&seq=news9&orientation=landscape" alt="Conference Participation" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4">
+<span class="inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Partnerships</span>
+</div>
+</div>
+<div class="p-6">
+<div class="text-gray-500 text-sm mb-2">May 1, 2025</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">Company to Showcase New Solutions at Global Industry Conference</h3>
+<p class="text-gray-600 mb-4 line-clamp-3">We're pleased to announce our participation as a platinum sponsor at the upcoming Global Industry Conference, where we'll be unveiling our latest innovations and connecting with partners.</p>
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/d4435d1f-e708-4175-8af9-7f4554cf2e24" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+Read More
+<i class="ri-arrow-right-line ri-lg ml-1"></i>
+</a>
+</div>
+</article>
+</div>
+<!-- Loading Skeleton (Hidden by default) -->
+<div id="loadingSkeleton" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+<div class="skeleton bg-gray-200 rounded-lg overflow-hidden">
+<div class="h-48 bg-gray-300"></div>
+<div class="p-6">
+<div class="h-4 bg-gray-300 rounded w-1/4 mb-4"></div>
+<div class="h-6 bg-gray-300 rounded mb-4"></div>
+<div class="h-4 bg-gray-300 rounded mb-2"></div>
+<div class="h-4 bg-gray-300 rounded mb-2"></div>
+<div class="h-4 bg-gray-300 rounded mb-4 w-3/4"></div>
+<div class="h-4 bg-gray-300 rounded w-1/4"></div>
+</div>
+</div>
+<div class="skeleton bg-gray-200 rounded-lg overflow-hidden">
+<div class="h-48 bg-gray-300"></div>
+<div class="p-6">
+<div class="h-4 bg-gray-300 rounded w-1/4 mb-4"></div>
+<div class="h-6 bg-gray-300 rounded mb-4"></div>
+<div class="h-4 bg-gray-300 rounded mb-2"></div>
+<div class="h-4 bg-gray-300 rounded mb-2"></div>
+<div class="h-4 bg-gray-300 rounded mb-4 w-3/4"></div>
+<div class="h-4 bg-gray-300 rounded w-1/4"></div>
+</div>
+</div>
+<div class="skeleton bg-gray-200 rounded-lg overflow-hidden">
+<div class="h-48 bg-gray-300"></div>
+<div class="p-6">
+<div class="h-4 bg-gray-300 rounded w-1/4 mb-4"></div>
+<div class="h-6 bg-gray-300 rounded mb-4"></div>
+<div class="h-4 bg-gray-300 rounded mb-2"></div>
+<div class="h-4 bg-gray-300 rounded mb-2"></div>
+<div class="h-4 bg-gray-300 rounded mb-4 w-3/4"></div>
+<div class="h-4 bg-gray-300 rounded w-1/4"></div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-12">
+<nav class="inline-flex rounded-md shadow">
+<a href="#" class="inline-flex items-center px-3 py-2 !rounded-l-button border border-gray-300 bg-white text-gray-500 hover:bg-gray-50 whitespace-nowrap">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+<span class="sr-only">Previous</span>
+</a>
+<a href="#" class="inline-flex items-center px-4 py-2 border border-gray-300 bg-primary text-white font-medium whitespace-nowrap">1</a>
+<a href="#" class="inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 font-medium whitespace-nowrap">2</a>
+<a href="#" class="inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 font-medium whitespace-nowrap">3</a>
+<span class="inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-gray-700 whitespace-nowrap">...</span>
+<a href="#" class="inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 font-medium whitespace-nowrap">8</a>
+<a href="#" class="inline-flex items-center px-3 py-2 !rounded-r-button border border-gray-300 bg-white text-gray-500 hover:bg-gray-50 whitespace-nowrap">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+<span class="sr-only">Next</span>
+</a>
+</nav>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">logo</a>
+<p class="text-gray-400 mb-6">Empowering businesses with innovative solutions since 2010. We're committed to excellence and customer satisfaction.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 !rounded-full hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 !rounded-full hover:bg-primary transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 !rounded-full hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 !rounded-full hover:bg-primary transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+<li><a href="#" class="text-primary hover:text-primary/80 transition-colors">News</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Services</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Consulting</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Development</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Analytics</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Digital Marketing</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Subscribe</h3>
+<p class="text-gray-400 mb-4">Stay updated with our latest news and offers.</p>
+<form class="mb-4">
+<div class="flex">
+<input type="email" placeholder="Your email" class="flex-grow px-4 py-2 !rounded-l-button border-none focus:outline-none focus:ring-2 focus:ring-primary bg-gray-800 text-white">
+<button type="submit" class="bg-primary text-white px-4 py-2 !rounded-r-button whitespace-nowrap hover:bg-opacity-90 transition-colors">Subscribe</button>
+</div>
+</form>
+<p class="text-gray-400 text-sm">By subscribing, you agree to our Privacy Policy.</p>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Company Name. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="categoryDropdownScript">
+document.addEventListener('DOMContentLoaded', function() {
+const categoryDropdown = document.getElementById('categoryDropdown');
+const categoryOptions = document.getElementById('categoryOptions');
+const selectedCategory = document.getElementById('selectedCategory');
+const options = document.querySelectorAll('.category-option');
+// Toggle dropdown
+categoryDropdown.addEventListener('click', function() {
+categoryOptions.classList.toggle('hidden');
+});
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+if (!categoryDropdown.contains(event.target) && !categoryOptions.contains(event.target)) {
+categoryOptions.classList.add('hidden');
+}
+});
+// Select option
+options.forEach(option => {
+option.addEventListener('click', function() {
+const value = this.getAttribute('data-value');
+selectedCategory.textContent = this.textContent;
+// Reset all options
+options.forEach(opt => {
+opt.classList.remove('text-primary', 'font-medium');
+});
+// Highlight selected option
+this.classList.add('text-primary', 'font-medium');
+// Show loading state
+document.getElementById('newsGrid').classList.add('hidden');
+document.getElementById('loadingSkeleton').classList.remove('hidden');
+// Simulate loading (in a real app, this would be an API call)
+setTimeout(() => {
+document.getElementById('loadingSkeleton').classList.add('hidden');
+document.getElementById('newsGrid').classList.remove('hidden');
+categoryOptions.classList.add('hidden');
+}, 800);
+});
+});
+});
+</script>
+<script id="mobileMenuScript">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('.ri-menu-line').parentElement;
+const closeButton = document.querySelector('.ri-close-line').parentElement;
+const mobileMenu = document.querySelector('.fixed.inset-0.z-50');
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+});
+closeButton.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+document.body.style.overflow = '';
+});
+});
+</script>
+</body>
+</html>

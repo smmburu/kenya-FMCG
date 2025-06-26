@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Partnership with Global Tech Solutions Announced | Company News</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#10b981',secondary:'#6366f1'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .news-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: #10b981;
+            z-index: 100;
+            width: 0%;
+            transition: width 0.2s ease;
+        }
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+        }
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.25rem;
+        }
+        .article-content ul li, .article-content ol li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        .article-content ul {
+            list-style-type: disc;
+        }
+        .article-content ol {
+            list-style-type: decimal;
+        }
+        .article-content blockquote {
+            border-left: 4px solid #10b981;
+            padding-left: 1rem;
+            font-style: italic;
+            margin: 1.5rem 0;
+            color: #4b5563;
+        }
+        .article-content a {
+            color: #10b981;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+        }
+        .article-content a:hover {
+            color: #059669;
+        }
+        .article-content img {
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+        .article-content .pullquote {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #10b981;
+            border-left: 3px solid #10b981;
+            padding-left: 1rem;
+            margin: 2rem 0;
+            line-height: 1.6;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .back-to-top {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="reading-progress" id="readingProgress"></div>
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-gray-600 hover:text-primary font-medium">Home</a>
+                <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/f03aba69-b36a-4959-9607-755ce2857b75" data-readdy="true" class="text-primary font-medium border-b-2 border-primary pb-1">News</a>
+                <a href="#" class="text-gray-600 hover:text-primary font-medium">About</a>
+                <a href="#" class="text-gray-600 hover:text-primary font-medium">Services</a>
+                <a href="#" class="text-gray-600 hover:text-primary font-medium">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap font-medium hover:bg-opacity-90 transition-colors">Get Started</button>
+                
+                <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden fixed inset-0 z-50 bg-white p-5">
+        <div class="flex justify-between items-center mb-8">
+            <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+            <button class="w-10 h-10 flex items-center justify-center text-gray-700">
+                <i class="ri-close-line ri-lg"></i>
+            </button>
+        </div>
+        
+        <nav class="flex flex-col space-y-6">
+            <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-gray-600 hover:text-primary font-medium text-lg">Home</a>
+            <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/f03aba69-b36a-4959-9607-755ce2857b75" data-readdy="true" class="text-primary font-medium text-lg border-l-4 border-primary pl-3">News</a>
+            <a href="#" class="text-gray-600 hover:text-primary font-medium text-lg">About</a>
+            <a href="#" class="text-gray-600 hover:text-primary font-medium text-lg">Services</a>
+            <a href="#" class="text-gray-600 hover:text-primary font-medium text-lg">Contact</a>
+        </nav>
+        
+        <div class="mt-8">
+            <button class="w-full bg-primary text-white py-3 !rounded-button whitespace-nowrap font-medium hover:bg-opacity-90 transition-colors">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Article Header -->
+    <div class="relative w-full h-[400px] md:h-[500px] overflow-hidden">
+        <img src="https://readdy.ai/api/search-image?query=modern%2520office%2520meeting%2520with%2520diverse%2520business%2520professionals%2520discussing%2520partnership%2520agreement%252C%2520professional%2520corporate%2520setting%252C%2520natural%2520lighting%252C%2520business%2520attire%252C%2520high%2520quality%2520professional%2520photo%2520with%2520shallow%2520depth%2520of%2520field%2520and%2520professional%2520lighting&width=1600&height=900&seq=news_header&orientation=landscape" alt="Strategic Partnership" class="w-full h-full object-cover object-top">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute top-6 left-6 md:top-8 md:left-8">
+            <span class="inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Partnerships</span>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+            <div class="container mx-auto">
+                <div class="max-w-4xl">
+                    <div class="flex items-center text-white/80 text-sm mb-3">
+                        <span>June 20, 2025</span>
+                        <span class="mx-2">•</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">Strategic Partnership with Global Tech Solutions Announced</h1>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full overflow-hidden mr-3">
+                            <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520business%2520executive%2520with%2520neutral%2520background%252C%2520well-dressed%252C%2520confident%2520expression%252C%2520high%2520quality%2520professional%2520photo&width=100&height=100&seq=author_avatar&orientation=squarish" alt="Author" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <div class="text-white font-medium">Michael Richardson</div>
+                            <div class="text-white/70 text-sm">Chief Partnerships Officer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3 border-b">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center text-sm text-gray-500">
+                <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="hover:text-primary">Home</a>
+                <i class="ri-arrow-right-s-line mx-2"></i>
+                <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/f03aba69-b36a-4959-9607-755ce2857b75" data-readdy="true" class="hover:text-primary">News & Updates</a>
+                <i class="ri-arrow-right-s-line mx-2"></i>
+                <span class="text-gray-700 font-medium">Strategic Partnership with Global Tech Solutions</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-10">
+                <!-- Article Content -->
+                <div class="lg:w-2/3">
+                    <!-- Social Share Sticky -->
+                    <div class="hidden lg:block fixed left-4 top-1/3 z-10">
+                        <div class="flex flex-col space-y-3">
+                            <button class="w-10 h-10 flex items-center justify-center bg-gray-100 !rounded-full hover:bg-gray-200 transition-colors">
+                                <i class="ri-facebook-fill text-gray-700"></i>
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center bg-gray-100 !rounded-full hover:bg-gray-200 transition-colors">
+                                <i class="ri-twitter-fill text-gray-700"></i>
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center bg-gray-100 !rounded-full hover:bg-gray-200 transition-colors">
+                                <i class="ri-linkedin-fill text-gray-700"></i>
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center bg-gray-100 !rounded-full hover:bg-gray-200 transition-colors">
+                                <i class="ri-mail-line text-gray-700"></i>
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center bg-gray-100 !rounded-full hover:bg-gray-200 transition-colors">
+                                <i class="ri-link text-gray-700"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Article Content -->
+                    <article class="max-w-3xl mx-auto">
+                        <div class="article-content text-gray-700 text-lg">
+                            <p>We are thrilled to announce a groundbreaking strategic partnership between our company and Global Tech Solutions, a leader in innovative technology services. This collaboration marks a significant milestone in our growth strategy and will enable us to expand our service offerings and technological capabilities across key markets in North America and Europe.</p>
+                            
+                            <div class="pullquote">
+                                "This partnership represents a pivotal moment in our company's journey, combining our industry expertise with cutting-edge technology to deliver unprecedented value to our clients."
+                            </div>
+                            
+                            <h2>Expanding Market Reach</h2>
+                            <p>The partnership with Global Tech Solutions will immediately extend our market reach to over 15 new countries across Europe and North America. By leveraging Global Tech Solutions' established presence in these regions, we can accelerate our expansion plans while minimizing operational risks and investment costs.</p>
+                            
+                            <p>Our combined client base now includes over 500 enterprise-level organizations, creating significant cross-selling opportunities for both companies. Market analysis indicates that this partnership could increase our total addressable market by approximately 40% within the first year alone.</p>
+                            
+                            <img src="https://readdy.ai/api/search-image?query=business%2520professionals%2520from%2520diverse%2520backgrounds%2520shaking%2520hands%2520in%2520modern%2520office%2520setting%252C%2520signifying%2520partnership%2520agreement%252C%2520professional%2520corporate%2520environment%252C%2520natural%2520lighting%252C%2520business%2520formal%2520attire%252C%2520high%2520quality%2520professional%2520photo&width=800&height=500&seq=partnership_signing&orientation=landscape" alt="Partnership Signing Ceremony" class="w-full">
+                            
+                            <h2>Enhanced Technology Capabilities</h2>
+                            <p>Global Tech Solutions brings to the table their industry-leading expertise in:</p>
+                            
+                            <ul>
+                                <li>Artificial Intelligence and Machine Learning solutions</li>
+                                <li>Cloud infrastructure optimization</li>
+                                <li>Advanced data analytics platforms</li>
+                                <li>IoT integration services</li>
+                                <li>Cybersecurity frameworks</li>
+                            </ul>
+                            
+                            <p>By integrating these capabilities with our existing service portfolio, we can now offer comprehensive end-to-end solutions that address the most complex challenges facing modern enterprises. Our clients will benefit from seamless technology integration, enhanced operational efficiency, and accelerated digital transformation.</p>
+                            
+                            <h2>Joint Product Development</h2>
+                            <p>A key component of this partnership is our commitment to joint product development. Our combined R&D teams are already collaborating on several innovative solutions:</p>
+                            
+                            <ol>
+                                <li>An AI-powered predictive analytics platform for the financial services sector</li>
+                                <li>A blockchain-based supply chain management system</li>
+                                <li>An integrated IoT solution for manufacturing optimization</li>
+                                <li>A next-generation cybersecurity framework for healthcare providers</li>
+                            </ol>
+                            
+                            <p>The first of these joint products is expected to launch in Q3 2025, with the full suite becoming available by early 2026.</p>
+                            
+                            <blockquote>
+                                "The synergy between our organizations is remarkable. By combining Global Tech Solutions' technological prowess with our industry expertise, we're creating solutions that neither company could develop independently." — Sarah Johnson, CTO
+                            </blockquote>
+                            
+                            <h2>Client Benefits</h2>
+                            <p>Our existing clients will experience immediate benefits from this partnership, including:</p>
+                            
+                            <ul>
+                                <li>Access to an expanded portfolio of services and solutions</li>
+                                <li>Enhanced technical support capabilities with 24/7 global coverage</li>
+                                <li>Streamlined implementation processes through integrated delivery teams</li>
+                                <li>Preferential pricing on new joint offerings</li>
+                                <li>Invitation to exclusive innovation workshops and technology previews</li>
+                            </ul>
+                            
+                            <img src="https://readdy.ai/api/search-image?query=professional%2520business%2520team%2520working%2520together%2520in%2520modern%2520office%2520with%2520digital%2520displays%2520showing%2520data%2520visualizations%252C%2520collaborative%2520environment%252C%2520diverse%2520professionals%252C%2520technology%2520integration%252C%2520high%2520quality%2520professional%2520photo&width=800&height=500&seq=team_collaboration&orientation=landscape" alt="Team Collaboration" class="w-full">
+                            
+                            <h3>Implementation Timeline</h3>
+                            <p>The integration of our service offerings will proceed in phases:</p>
+                            
+                            <ul>
+                                <li><strong>Phase 1 (July-August 2025):</strong> Initial integration of sales and marketing functions, joint client communications</li>
+                                <li><strong>Phase 2 (September-October 2025):</strong> Technical integration of service delivery platforms, staff cross-training</li>
+                                <li><strong>Phase 3 (November-December 2025):</strong> Launch of first joint service offerings, unified client portal</li>
+                                <li><strong>Phase 4 (Q1 2026):</strong> Complete integration of all services, full operational alignment</li>
+                            </ul>
+                            
+                            <h2>Leadership Perspectives</h2>
+                            <p>David Chen, CEO of Global Tech Solutions, expressed his enthusiasm for the partnership: "We've long admired the industry expertise and client relationships that your company has developed. By combining our technological capabilities with your market knowledge, we're creating a partnership that will drive innovation and deliver exceptional value to clients in both our existing and new markets."</p>
+                            
+                            <p>Our CEO, Jennifer Martinez, added: "This partnership represents a perfect alignment of vision and capabilities. Together, we're positioned to address the evolving needs of our clients with solutions that combine deep industry knowledge with cutting-edge technology. We're excited about the growth opportunities this creates for both our organizations and the enhanced value we can deliver to our clients."</p>
+                            
+                            <div class="pullquote">
+                                "This is more than just a business arrangement—it's a true strategic alliance that will transform how technology solutions are delivered across multiple industries."
+                            </div>
+                            
+                            <h2>Looking Ahead</h2>
+                            <p>As we implement this partnership, we remain committed to maintaining the high standards of service that our clients expect. Our integration teams are working diligently to ensure a seamless transition, with minimal disruption to existing client relationships and projects.</p>
+                            
+                            <p>We'll be hosting a series of webinars and client briefings over the coming weeks to provide more detailed information about the partnership and the enhanced capabilities it brings. If you're interested in learning more, please contact your account manager or visit our dedicated partnership portal at <a href="#">partnership.companyname.com</a>.</p>
+                            
+                            <p>We're excited about this new chapter in our company's journey and look forward to delivering even greater value to our clients through this strategic partnership.</p>
+                        </div>
+                        
+                        <!-- Tags -->
+                        <div class="mt-10 pt-6 border-t">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-gray-700 font-medium">Related Topics:</span>
+                                <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1 !rounded-full text-sm hover:bg-gray-200 transition-colors">Strategic Partnerships</a>
+                                <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1 !rounded-full text-sm hover:bg-gray-200 transition-colors">Technology Integration</a>
+                                <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1 !rounded-full text-sm hover:bg-gray-200 transition-colors">Market Expansion</a>
+                                <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1 !rounded-full text-sm hover:bg-gray-200 transition-colors">Product Development</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Mobile Share -->
+                        <div class="lg:hidden mt-8">
+                            <h3 class="text-gray-700 font-medium mb-3">Share this article:</h3>
+                            <div class="flex space-x-3">
+                                <button class="w-10 h-10 flex items-center justify-center bg-gray-100 !rounded-full hover:bg-gray-200 transition-colors">
+                                    <i class="ri-facebook-fill text-gray-700"></i>
+                                </button>
+                                <button class="w-10 h-10 flex items-center justify-center bg-gray-100 !rounded-full hover:bg-gray-200 transition-colors">
+                                    <i class="ri-twitter-fill text-gray-700"></i>
+                                </button>
+                                <button class="w-10 h-10 flex items-center justify-center bg-gray-100 !rounded-full hover:bg-gray-200 transition-colors">
+                                    <i class="ri-linkedin-fill text-gray-700"></i>
+                                </button>
+                                <button class="w-10 h-10 flex items-center justify-center bg-gray-100 !rounded-full hover:bg-gray-200 transition-colors">
+                                    <i class="ri-mail-line text-gray-700"></i>
+                                </button>
+                                <button class="w-10 h-10 flex items-center justify-center bg-gray-100 !rounded-full hover:bg-gray-200 transition-colors">
+                                    <i class="ri-link text-gray-700"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Author Bio -->
+                        <div class="mt-10 bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-start">
+                                <div class="w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                                    <img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520business%2520executive%2520with%2520neutral%2520background%252C%2520well-dressed%252C%2520confident%2520expression%252C%2520high%2520quality%2520professional%2520photo&width=200&height=200&seq=author_avatar_large&orientation=squarish" alt="Author" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h3 class="text-gray-900 font-semibold text-lg">Michael Richardson</h3>
+                                    <p class="text-gray-600 text-sm mb-3">Chief Partnerships Officer</p>
+                                    <p class="text-gray-700">Michael has over 15 years of experience in strategic partnerships and business development. He has successfully led numerous partnership initiatives that have driven significant growth and innovation for the company.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Article Navigation -->
+                        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <a href="#" class="group flex items-start p-4 border border-gray-200 rounded-lg hover:border-primary transition-colors">
+                                <div class="w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="ri-arrow-left-line ri-lg text-gray-500 group-hover:text-primary transition-colors"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-gray-500 mb-1">Previous Article</div>
+                                    <h4 class="text-gray-900 font-medium group-hover:text-primary transition-colors">New Regional Headquarters Opens in Singapore</h4>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="group flex items-start justify-end text-right p-4 border border-gray-200 rounded-lg hover:border-primary transition-colors">
+                                <div>
+                                    <div class="text-sm text-gray-500 mb-1">Next Article</div>
+                                    <h4 class="text-gray-900 font-medium group-hover:text-primary transition-colors">Launch of Advanced Certification Program for Industry Professionals</h4>
+                                </div>
+                                <div class="w-10 h-10 flex items-center justify-center ml-3 flex-shrink-0">
+                                    <i class="ri-arrow-right-line ri-lg text-gray-500 group-hover:text-primary transition-colors"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="lg:w-1/3">
+                    <div class="sticky top-28">
+                        <!-- Back to News -->
+                        <div class="mb-8">
+                            <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/f03aba69-b36a-4959-9607-755ce2857b75" data-readdy="true" class="inline-flex items-center text-primary hover:text-primary/80">
+                                <i class="ri-arrow-left-line ri-lg mr-2"></i>
+                                <span>Back to News & Updates</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Related Articles -->
+                        <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                            <h3 class="text-gray-900 font-semibold text-lg mb-4">Related Articles</h3>
+                            
+                            <div class="space-y-4">
+                                <a href="#" class="group flex items-start">
+                                    <div class="w-20 h-20 rounded-md overflow-hidden flex-shrink-0 mr-3">
+                                        <img src="https://readdy.ai/api/search-image?query=modern%2520tech%2520product%2520launch%2520event%252C%2520innovative%2520technology%2520display%252C%2520professional%2520presentation%252C%2520engaged%2520audience%252C%2520sleek%2520product%2520showcase%252C%2520high%2520quality%2520professional%2520photo&width=200&height=200&seq=related1&orientation=squarish" alt="Joint Product Launch" class="w-full h-full object-cover object-top">
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-blue-500 font-semibold">Partnerships</span>
+                                        <h4 class="text-gray-900 font-medium text-sm group-hover:text-primary transition-colors">Joint Product Launch with InnovateTech Expands Market Reach</h4>
+                                        <p class="text-gray-500 text-xs mt-1">May 28, 2025</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="group flex items-start">
+                                    <div class="w-20 h-20 rounded-md overflow-hidden flex-shrink-0 mr-3">
+                                        <img src="https://readdy.ai/api/search-image?query=international%2520business%2520conference%2520with%2520diverse%2520attendees%252C%2520professional%2520networking%252C%2520exhibition%2520booths%252C%2520industry%2520showcase%252C%2520business%2520presentations%252C%2520high%2520quality%2520professional%2520photo&width=200&height=200&seq=related2&orientation=squarish" alt="Global Industry Conference" class="w-full h-full object-cover object-top">
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-blue-500 font-semibold">Partnerships</span>
+                                        <h4 class="text-gray-900 font-medium text-sm group-hover:text-primary transition-colors">Company to Showcase New Solutions at Global Industry Conference</h4>
+                                        <p class="text-gray-500 text-xs mt-1">May 1, 2025</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="group flex items-start">
+                                    <div class="w-20 h-20 rounded-md overflow-hidden flex-shrink-0 mr-3">
+                                        <img src="https://readdy.ai/api/search-image?query=modern%2520office%2520building%2520exterior%2520with%2520glass%2520facade%252C%2520urban%2520setting%252C%2520professional%2520architecture%252C%2520blue%2520sky%252C%2520business%2520district%252C%2520high%2520quality%2520professional%2520photo&width=200&height=200&seq=related3&orientation=squarish" alt="New Office Opening" class="w-full h-full object-cover object-top">
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-green-500 font-semibold">Expansions</span>
+                                        <h4 class="text-gray-900 font-medium text-sm group-hover:text-primary transition-colors">New Regional Headquarters Opens in Singapore</h4>
+                                        <p class="text-gray-500 text-xs mt-1">June 15, 2025</p>
+                                    </div>
+                                </a>
+                                
+                                <a href="#" class="group flex items-start">
+                                    <div class="w-20 h-20 rounded-md overflow-hidden flex-shrink-0 mr-3">
+                                        <img src="https://readdy.ai/api/search-image?query=professional%2520team%2520working%2520in%2520modern%2520office%2520environment%252C%2520collaborative%2520workspace%252C%2520diverse%2520business%2520professionals%252C%2520technology%2520integration%252C%2520productive%2520atmosphere%252C%2520high%2520quality%2520professional%2520photo&width=200&height=200&seq=related4&orientation=squarish" alt="Team Expansion" class="w-full h-full object-cover object-top">
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-green-500 font-semibold">Expansions</span>
+                                        <h4 class="text-gray-900 font-medium text-sm group-hover:text-primary transition-colors">Company Expands Development Team with Key Industry Talent</h4>
+                                        <p class="text-gray-500 text-xs mt-1">May 20, 2025</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Newsletter -->
+                        <div class="bg-gray-900 rounded-lg p-6">
+                            <h3 class="text-white font-semibold text-lg mb-2">Stay Updated</h3>
+                            <p class="text-gray-400 text-sm mb-4">Subscribe to our newsletter to receive the latest news and updates directly in your inbox.</p>
+                            
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" placeholder="Your email address" class="w-full px-4 py-2 !rounded-button border-none focus:outline-none focus:ring-2 focus:ring-primary bg-gray-800 text-white text-sm">
+                                </div>
+                                <button type="submit" class="w-full bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap font-medium hover:bg-opacity-90 transition-colors">Subscribe</button>
+                            </form>
+                            
+                            <p class="text-gray-500 text-xs mt-3">By subscribing, you agree to our Privacy Policy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- More From This Category -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900">More from Partnerships</h2>
+                <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/f03aba69-b36a-4959-9607-755ce2857b75" data-readdy="true" class="text-primary hover:text-primary/80 font-medium">View All</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=modern%2520tech%2520product%2520launch%2520event%252C%2520innovative%2520technology%2520display%252C%2520professional%2520presentation%252C%2520engaged%2520audience%252C%2520sleek%2520product%2520showcase%252C%2520high%2520quality%2520professional%2520photo&width=600&height=400&seq=more1&orientation=landscape" alt="Joint Product Launch" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 left-4">
+                            <span class="inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Partnerships</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-gray-500 text-sm mb-2">May 28, 2025</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">Joint Product Launch with InnovateTech Expands Market Reach</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">Our collaboration with InnovateTech has resulted in the successful launch of an integrated solution that addresses key industry challenges while expanding our combined market reach by an estimated 35%.</p>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            Read More
+                            <i class="ri-arrow-right-line ri-lg ml-1"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=international%2520business%2520conference%2520with%2520diverse%2520attendees%252C%2520professional%2520networking%252C%2520exhibition%2520booths%252C%2520industry%2520showcase%252C%2520business%2520presentations%252C%2520high%2520quality%2520professional%2520photo&width=600&height=400&seq=more2&orientation=landscape" alt="Global Industry Conference" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 left-4">
+                            <span class="inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Partnerships</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-gray-500 text-sm mb-2">May 1, 2025</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">Company to Showcase New Solutions at Global Industry Conference</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">We're pleased to announce our participation as a platinum sponsor at the upcoming Global Industry Conference, where we'll be unveiling our latest innovations and connecting with partners.</p>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            Read More
+                            <i class="ri-arrow-right-line ri-lg ml-1"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Article 3 -->
+                <article class="news-card bg-white rounded-lg overflow-hidden shadow-md border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=business%2520professionals%2520signing%2520contract%2520in%2520modern%2520office%2520setting%252C%2520partnership%2520agreement%252C%2520professional%2520corporate%2520environment%252C%2520handshake%252C%2520business%2520formal%2520attire%252C%2520high%2520quality%2520professional%2520photo&width=600&height=400&seq=more3&orientation=landscape" alt="New Partnership" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 left-4">
+                            <span class="inline-block bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">Partnerships</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-gray-500 text-sm mb-2">April 15, 2025</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">Strategic Alliance Formed with European Market Leader</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">We're excited to announce our new strategic alliance with EuroTech Systems, a market leader in European enterprise solutions, creating new opportunities for growth and innovation.</p>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            Read More
+                            <i class="ri-arrow-right-line ri-lg ml-1"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top fixed bottom-8 right-8 w-12 h-12 flex items-center justify-center bg-primary text-white !rounded-full shadow-lg hover:bg-primary/90 transition-all">
+        <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">logo</a>
+                    <p class="text-gray-400 mb-6">Empowering businesses with innovative solutions since 2010. We're committed to excellence and customer satisfaction.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 !rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 !rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 !rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 !rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/6b55422d-6ed1-43b5-a88d-0ca37de261fc" data-readdy="true" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="https://readdy.ai/home/ab78a978-b45c-411d-9333-024496cd92d0/f03aba69-b36a-4959-9607-755ce2857b75" data-readdy="true" class="text-primary hover:text-primary/80 transition-colors">News</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Consulting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Analytics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Subscribe</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news and offers.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="flex-grow px-4 py-2 !rounded-l-button border-none focus:outline-none focus:ring-2 focus:ring-primary bg-gray-800 text-white">
+                            <button type="submit" class="bg-primary text-white px-4 py-2 !rounded-r-button whitespace-nowrap hover:bg-opacity-90 transition-colors">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="text-gray-400 text-sm">By subscribing, you agree to our Privacy Policy.</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Company Name. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="mobileMenuScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.ri-menu-line').parentElement;
+            const closeButton = document.querySelector('.ri-close-line').parentElement;
+            const mobileMenu = document.querySelector('.fixed.inset-0.z-50');
+            
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeButton.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+
+    <script id="readingProgressScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.getElementById('readingProgress');
+            const article = document.querySelector('.article-content');
+            const backToTopButton = document.getElementById('backToTop');
+            
+            if (progressBar && article) {
+                window.addEventListener('scroll', function() {
+                    const scrollTop = window.scrollY;
+                    const articleHeight = article.offsetHeight;
+                    const windowHeight = window.innerHeight;
+                    const articleTop = article.offsetTop;
+                    
+                    // Calculate reading progress
+                    const totalToRead = articleHeight - windowHeight;
+                    const currentProgress = scrollTop - articleTop;
+                    let progressPercentage = (currentProgress / totalToRead) * 100;
+                    
+                    // Clamp between 0 and 100
+                    progressPercentage = Math.max(0, Math.min(100, progressPercentage));
+                    
+                    // Update progress bar
+                    progressBar.style.width = progressPercentage + '%';
+                    
+                    // Show/hide back to top button
+                    if (scrollTop > 300) {
+                        backToTopButton.classList.add('visible');
+                    } else {
+                        backToTopButton.classList.remove('visible');
+                    }
+                });
+            }
+            
+            // Back to top functionality
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script id="clipboardScript">
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyLinkButton = document.querySelector('.ri-link').parentElement;
+            
+            if (copyLinkButton) {
+                copyLinkButton.addEventListener('click', function() {
+                    navigator.clipboard.writeText(window.location.href)
+                        .then(() => {
+                            // Show a temporary tooltip or notification
+                            const originalInnerHTML = copyLinkButton.innerHTML;
+                            copyLinkButton.innerHTML = '<i class="ri-check-line ri-lg text-primary"></i>';
+                            
+                            setTimeout(() => {
+                                copyLinkButton.innerHTML = originalInnerHTML;
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy: ', err);
+                        });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
